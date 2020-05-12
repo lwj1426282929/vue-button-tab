@@ -17,62 +17,62 @@
 <script>
   import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
 
-@Component
+  @Component
   export default class ButtonTabItem extends Vue {
-  @Prop({ type: [String, Number], default: () => '' }) value
+    @Prop({ type: [String, Number], default: () => '' }) value
 
-  selected = false
+    selected = false
 
-  get wrapClass () {
-    return {
-      ['gutter-' + this.$parent.gutter]: +this.$parent.gutter,
-      'gutter-0': !+this.$parent.gutter,
-      ['col-' + this.$parent.column]: +this.$parent.column,
-      flex: !this.$parent.column
+    get wrapClass () {
+      return {
+        ['gutter-' + this.$parent.gutter]: +this.$parent.gutter,
+        'gutter-0': !+this.$parent.gutter,
+        ['col-' + this.$parent.column]: +this.$parent.column,
+        flex: !this.$parent.column
+      }
     }
-  }
 
-  get classes () {
-    return {
-      selected: this.selected
+    get classes () {
+      return {
+        selected: this.selected
+      }
     }
-  }
 
-  get styles () {
-    return {
-      color: this.selected ? this.$parent.activeColor : this.$parent.defaultColor
+    get styles () {
+      return {
+        color: this.selected ? this.$parent.activeColor : this.$parent.defaultColor
+      }
     }
-  }
 
-  get bgStyles () {
-    return {
-      background: this.selected ? this.$parent.activeBgColor : this.$parent.defaultBgColor,
-      borderColor: this.selected ? this.$parent.activeBorderColor : this.$parent.defaultBorderColor
+    get bgStyles () {
+      return {
+        background: this.selected ? this.$parent.activeBgColor : this.$parent.defaultBgColor,
+        borderColor: this.selected ? this.$parent.activeBorderColor : this.$parent.defaultBorderColor
+      }
     }
-  }
 
-  itemClick () {
-    // 如果是单选模式并且已经选中则不触发任何操作
-    if (!this.$parent.multiple && this.selected) return
+    itemClick () {
+      // 如果是单选模式并且已经选中则不触发任何操作
+      if (!this.$parent.multiple && this.selected) return
 
-    if (this.$parent.multiple) {
-      this.selected = !this.selected
-    } else {
-      this.selected = true
+      if (this.$parent.multiple) {
+        this.selected = !this.selected
+      } else {
+        this.selected = true
+      }
+      this.$parent.$emit('item-click', this.value)
     }
-    this.$parent.$emit('item-click', this.value)
-  }
 
-  @Watch('$parent.value', { immediate: true, deep: true })
-  onValueChange () {
-    console.log(this.$parent.multiple)
-    if (this.$parent.multiple) {
-      const value = this.$parent.value instanceof Array ? this.$parent.value : this.$parent.value.split(',')
-      this.selected = value.find(item => item === this.value)
-    } else {
-      this.selected = this.$parent.value === this.value
+    @Watch('$parent.value', { immediate: true, deep: true })
+    onValueChange () {
+      console.log(this.$parent.multiple)
+      if (this.$parent.multiple) {
+        const value = this.$parent.value instanceof Array ? this.$parent.value : this.$parent.value.split(',')
+        this.selected = value.find(item => item === this.value)
+      } else {
+        this.selected = this.$parent.value === this.value
+      }
     }
-  }
   }
 </script>
 
