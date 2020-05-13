@@ -1,7 +1,13 @@
 {
   "name": "vue-button-tab",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "lwj1426282929",
+  "main": "src/components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lwj1426282929/vue-button-tab.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -28,5 +34,6 @@
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "keywords": ["vue", "button-tab"]
 }
