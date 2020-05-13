@@ -51,18 +51,18 @@ export default {
 
 ### button-tab 属性
 
-| 参数                 | 说明                                                   | 类型                    | 默认值   |
-| :------------------- | :----------------------------------------------------- | :---------------------- | :------- |
-| value / v-model      | 绑定值，在多选模式下为数组                             | string / number / array | -        |
-| multiple             | 是否开启多选模式                                       | boolean                 | false    |
-| column               | 列数，规定一行平均分配多少列,最多一行 24 列            | number                  | -        |
-| gutter               | 在布局只有一行的情况下可以通过该属性设置元素之间的间距 | number / string         | 0        |
-| default-color        | 默认字体颜色                                           | string                  | #999999  |
-| active-color         | 选中时字体颜色                                         | string                  | #FFFFFF  |
-| default-bg-color     | 默认背景颜色                                           | string                  | #FFFFFF  |
-| active-bg-color      | 选中时背景颜色                                         | string                  | #2482FC  |
-| default-border-color | 默认边框颜色                                           | string                  | #2482FC" |
-| active-border-color  | 选中时边框颜色                                         | string                  | #2482FC" |
+| 参数                 | 说明                                                   | 类型                    | 默认值  |
+| :------------------- | :----------------------------------------------------- | :---------------------- | :------ |
+| value / v-model      | 绑定值，在多选模式下为数组                             | string / number / array | -       |
+| multiple             | 是否开启多选模式                                       | boolean                 | false   |
+| column               | 列数，规定一行平均分配多少列,最多一行 24 列            | number                  | -       |
+| gutter               | 在布局只有一行的情况下可以通过该属性设置元素之间的间距 | number / string         | 0       |
+| default-color        | 默认字体颜色                                           | string                  | #999999 |
+| active-color         | 选中时字体颜色                                         | string                  | #FFFFFF |
+| default-bg-color     | 默认背景颜色                                           | string                  | #FFFFFF |
+| active-bg-color      | 选中时背景颜色                                         | string                  | #2482FC |
+| default-border-color | 默认边框颜色                                           | string                  | #2482FC |
+| active-border-color  | 选中时边框颜色                                         | string                  | #2482FC |
 
 ### button-tab 事件
 
