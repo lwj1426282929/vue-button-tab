@@ -10,7 +10,7 @@
   import { Vue, Component } from 'vue-property-decorator'
   import ButtonTab from './components/ButtonTab'
   import ButtonTabItem from './components/ButtonTabItem'
-  
+
   @Component({
     components: { ButtonTab, ButtonTabItem }
   })

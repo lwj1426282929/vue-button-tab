@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "private": false,
   "author": "lwj1426282929",
-  "main": "src/components",
+  "main": "vue-button-tab.umd.min.js",
+  "files": ["lib/**/*"],
   "repository": {
     "type": "git",
     "url": "https://github.com/lwj1426282929/vue-button-tab.git"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --dest lib --target lib --name vue-button-tab ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
