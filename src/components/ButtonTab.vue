@@ -1,13 +1,21 @@
 <template>
   <div :class="['button-tab', 'clear-gutter-' + gutter]">
-    <slot></slot>
+    <slot>
+      <button-tab-item v-for="(item, index) in items"
+                       :key="index"
+                       :value="item.value"
+                       :label="item.label"></button-tab-item>
+    </slot>
   </div>
 </template>
 
 <script>
   import { Vue, Component, Model, Prop } from 'vue-property-decorator'
+  import ButtonTabItem from './ButtonTabItem'
 
-  @Component
+  @Component({
+    components: { ButtonTabItem }
+  })
   export default class ButtonTab extends Vue {
     @Model('change', { type: [String, Number, Array], default: '' }) value
 
@@ -20,6 +28,7 @@
     @Prop({ type: String, default: () => '#2482FC' }) activeBgColor
     @Prop({ type: String, default: () => '#2482FC' }) defaultBorderColor
     @Prop({ type: String, default: () => '#2482FC' }) activeBorderColor
+    @Prop({ type: Array, default: () => [] }) items
 
     created () {
       this.$on('item-click', this.toggleSelected)

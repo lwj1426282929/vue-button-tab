@@ -8,7 +8,7 @@
       <div class="button-tab-item-bg"
            :style="bgStyles"></div>
       <div class="slot">
-        <slot></slot>
+        <slot>{{ label }}</slot>
       </div>
     </div>
   </div>
@@ -20,6 +20,7 @@
 @Component
   export default class ButtonTabItem extends Vue {
     @Prop({ type: [String, Number], default: () => '' }) value
+    @Prop({ type: [String, Number], default: () => '' }) label
 
     selected = false
 
