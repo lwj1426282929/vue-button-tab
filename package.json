@@ -3,7 +3,7 @@
   "version": "0.1.4",
   "private": false,
   "author": "lwj1426282929",
-  "main": "vue-button-tab.umd.min.js",
+  "main": "lib/vue-button-tab.umd.min.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/lwj1426282929/vue-button-tab.git"
