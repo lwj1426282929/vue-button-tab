@@ -50,7 +50,6 @@
 .button-tab {
     display: flex;
     flex-wrap: wrap;
-    font-size: 28px;
 }
 
 @for $i from 1 through 100 {
