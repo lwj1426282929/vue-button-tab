@@ -1,6 +1,6 @@
 {
   "name": "vue-button-tab",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "author": "lwj1426282929",
   "main": "lib/vue-button-tab.umd.min.js",
