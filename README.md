@@ -1,6 +1,6 @@
 # vue-button-tab
 
-> 一款基于 Vue 的按钮组件，适用于移动端和 PC 端。
+> 一款基于 Vue 的按钮选择组件。
 
 ![vue-button-tab](./src/assets/img/vue-button-tab.png)
 
