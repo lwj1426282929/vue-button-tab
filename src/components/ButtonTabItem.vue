@@ -87,6 +87,7 @@
 @for $i from 1 through 24 {
     .button-tab-item-wrap.col-#{$i} {
         width: percentage(1 / $i);
+        box-sizing: border-box;
     }
 }
 

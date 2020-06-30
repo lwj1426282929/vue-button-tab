@@ -1,6 +1,6 @@
 {
   "name": "vue-button-tab",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "private": false,
   "author": "lwj1426282929",
   "main": "lib/vue-button-tab.umd.min.js",
@@ -16,6 +16,7 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
+    "vue-button-tab": "^0.1.6",
     "vue-property-decorator": "^8.4.2"
   },
   "devDependencies": {
@@ -35,5 +36,8 @@
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
-  "keywords": ["vue", "button-tab"]
+  "keywords": [
+    "vue",
+    "button-tab"
+  ]
 }

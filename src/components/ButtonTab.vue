@@ -59,6 +59,8 @@
 .button-tab {
     display: flex;
     flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 10px 0;
 }
 
 @for $i from 1 through 100 {
